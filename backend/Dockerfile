@@ -1,4 +1,16 @@
-FROM ubuntu:latest
-LABEL authors="aadvo"
+FROM python:3.10-alpine
 
-ENTRYPOINT ["top", "-b"]
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+RUN mkdir /app
+WORKDIR /app
+
+RUN pip install --upgrade pip
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+
+COPY . .
+WORKDIR /app/backend
+RUN mkdir logs
+#CMD ["python", "main.py"]
