@@ -29,6 +29,18 @@ class Settings(BaseSettings):
         'http://0.0.0.0'
     ]
 
+    INIT_USER: dict = {
+        "username": "User1",
+        "email": "user@test.com",
+        "password": "U12e-!aQ"
+    }
+
+    INIT_NOTE: dict = {
+        "status": "active",
+        "content": "Buy some milk",
+        "user_id": 1
+    }
+
     class Config:
         env_file = ENVPATH
         env_file_encoding = "utf-8"

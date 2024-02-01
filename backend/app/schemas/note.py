@@ -1,5 +1,7 @@
 import enum
-from pydantic import BaseModel
+from typing import Optional
+
+from pydantic import BaseModel, Field
 
 
 class Status(str, enum.Enum):
@@ -8,15 +10,16 @@ class Status(str, enum.Enum):
 
 
 class NoteBaseModel(BaseModel):
-    status: str
+    status: Optional[str] = Field(default=Status.ACTIVE)
     content: str
+    user_id: int
 
 
-class NoteCreateModel(BaseModel):
+class NoteCreateModel(NoteBaseModel):
     pass
 
 
-class NoteUpdateModel(BaseModel):
+class NoteUpdateModel(NoteBaseModel):
     pass
 
 

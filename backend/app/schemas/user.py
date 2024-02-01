@@ -3,9 +3,6 @@ from typing import List, Optional
 from pydantic import BaseModel, Field
 
 
-USER_PASSWORD_REGEX = r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])"
-
-
 class UserBaseModel(BaseModel):
     username: str
     email: str
@@ -13,11 +10,7 @@ class UserBaseModel(BaseModel):
 
 
 class UserCreateModel(UserBaseModel):
-    password: str = Field(
-        min_length=8,
-        max_length=20,
-        regex=USER_PASSWORD_REGEX
-    )
+    password: str
 
 
 class UserUpdateModel(UserBaseModel):
