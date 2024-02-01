@@ -24,7 +24,7 @@ def create_note(note: NoteCreateModel, db: Session = Depends(get_db)):
     return note_db
 
 
-@note_router.delete("/note/{note_id}", response_model=None)
+@note_router.delete("/{note_id}", response_model=None)
 def remove_note(note_id: int, db: Session = Depends(get_db)):
     if get_note_by_id(db, note_id):
         delete_note(db, note_id)
