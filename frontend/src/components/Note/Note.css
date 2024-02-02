@@ -1,0 +1,23 @@
+.note {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid chocolate;
+    background: burlywood;
+    width: 200px;
+    height: 210px;
+    padding: 20px;
+}
+
+.note p {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Vujahday Script', cursive;
+}
+
+.note h3 {
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Vujahday Script', cursive;
+}

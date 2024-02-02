@@ -9,11 +9,12 @@
 }
 
 .button:hover {
-    opacity: 0.8;
+    background: darkslateblue;
+    color: #ffffff;
 }
 
 .button.active {
-    background: #535bf2;
+    background: darkslateblue;
     color: #ffffff;
 }
 

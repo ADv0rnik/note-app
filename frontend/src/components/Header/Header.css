@@ -20,4 +20,6 @@ header {
     padding: 0.5rem;
     display: flex;
     text-align: center;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 20px;
 }
