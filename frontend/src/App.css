@@ -9,4 +9,5 @@ section {
     display: flex;
     align-items: center;
     position: absolute;
+    flex-direction: column;
 }

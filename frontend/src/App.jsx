@@ -11,7 +11,6 @@ export default function App() {
   return (
     <>
         <Header/>
-        <h3>My Notes</h3>
         <Routes>
             <Route exaxt path={`${PATHS.NOTES}`} element={<Notes />} />
             <Route exaxt path={`${PATHS.ADD_NOTE}`} element={<AddNote />} />

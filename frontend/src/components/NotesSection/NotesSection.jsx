@@ -18,13 +18,13 @@ export default function NotesSection () {
 
     return (
         <section>
+            <h3>My Notes</h3>
             {notes.length === 0 ? (
                 <div className="homeLoader">
                     <Loader/>
                 </div>
             ) : (
                 <div className="note-cards">
-
                     {notes.length > 0 && notes.map(
                         (note, index) => <Note
                             key={`${note}_${index}`}

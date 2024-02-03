@@ -1,21 +1,25 @@
 .button {
     padding: 0.8rem 2rem;
-    border: none;
+    border: 1px solid #095776;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
     margin-right: 1rem;
+    background: #095776;
+    color: #ffffff;
 }
 
 .button:hover {
-    background: darkslateblue;
-    color: #ffffff;
+    background: #ffffff;
+    color: #095776;
+
+    border-color: #095776;
 }
 
 .button.active {
-    background: darkslateblue;
-    color: #ffffff;
+    background: #ffffff;
+    color: #095776;
 }
 
 .button.disabled {

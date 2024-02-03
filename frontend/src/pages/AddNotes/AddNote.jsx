@@ -1,7 +1,15 @@
+import NewNote from "../../components/NewNote/NewNote.jsx";
+
 export default function AddNote() {
+
+
     return (
         <>
-            <h3>Add new note</h3>
+            <section>
+                <div >
+                    <NewNote />
+                </div>
+            </section>
         </>
     )
 }
