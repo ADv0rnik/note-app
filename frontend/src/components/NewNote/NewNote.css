@@ -43,6 +43,15 @@
     margin-bottom: 1rem;
 }
 
+.info {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    background: #84c586;
+    text-decoration-color: darkgreen;
+}
+
 .form__controls > input:focus,
 textarea:focus {
     outline: 2px solid #84c586;

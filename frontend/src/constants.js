@@ -6,5 +6,8 @@ export const PATHS = {
 };
 
 export const API_URLS = {
-    NOTES: '/notes/'
+    NOTES: '/notes/',
+    NOTE:  '/notes/note/'
 };
+
+export const USER_ID = 1

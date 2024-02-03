@@ -1,18 +1,31 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './NewNote.css'
 import Button from "../Button/Button.jsx";
+import {USER_ID} from "../../constants.js";
+import {createNote} from "../../api/requests.js";
 
 export default function NewNote () {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const [respData, setRespData] = useState({})
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = event => {
         event.preventDefault();
+        setIsLoading(true)
         console.log('title 👉️', title);
         console.log('content 👉️', content);
-        setTitle('');
-        setContent('');
+        const body = {
+            title: title,
+            content: content,
+            user_id: USER_ID
+        };
+        createNote(body).then(value => setRespData(value));
+        // setTitle('');
+        // setContent('');
     }
+    console.log(respData)
+
 
     return (
         <div className="new-note-container">
@@ -42,6 +55,11 @@ export default function NewNote () {
                     <Button type="submit">Add</Button>
                 </div>
             </form>
+            {isLoading &&
+                <div className="info">
+                    <p>New note has been added</p>
+                </div>
+            }
         </div>
     );
 }

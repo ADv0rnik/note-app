@@ -11,3 +11,14 @@ export const getNotes = async () => {
         return [];
     }
 };
+
+
+export const createNote = async (body) => {
+    try {
+        const response = await axios.post(`${BASE_URL}${API_URLS.NOTE}`, body);
+        return response.data;
+    } catch (error) {
+        console.log(error.toJSON());
+        return [];
+    }
+};
