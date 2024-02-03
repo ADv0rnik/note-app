@@ -10,6 +10,7 @@ class Status(str, enum.Enum):
 
 
 class NoteBaseModel(BaseModel):
+    title: str
     status: Optional[str] = Field(default=Status.ACTIVE)
     content: str
     user_id: int

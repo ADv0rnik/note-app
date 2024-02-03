@@ -1,5 +1,5 @@
 .note {
-    display: inline-block;
+    display: inline-grid;
     margin: 10px;
     border: 1px solid chocolate;
     background: burlywood;

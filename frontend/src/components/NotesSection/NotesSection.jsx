@@ -1,7 +1,8 @@
 import Note from "../Note/Note.jsx";
 import './NoteSection.css'
 import {getNotes} from "../../api/requests.js";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
+import Loader from "../Loader/Loader.jsx";
 
 export default function NotesSection () {
     const [notes, setNotes] =useState([])
@@ -17,14 +18,21 @@ export default function NotesSection () {
 
     return (
         <section>
-            <div className="note-cards">
-                {notes.length > 0 && notes.map(
-                    (note, index) => <Note
-                        key={`${note}_${index}`}
-                        title={note.status}
-                        msg={note.content} />
-                )}
-            </div>
+            {notes.length === 0 ? (
+                <div className="homeLoader">
+                    <Loader/>
+                </div>
+            ) : (
+                <div className="note-cards">
+
+                    {notes.length > 0 && notes.map(
+                        (note, index) => <Note
+                            key={`${note}_${index}`}
+                            title={note.title}
+                            msg={note.content}/>
+                    )}
+                </div>
+            )}
         </section>
     )
 }
