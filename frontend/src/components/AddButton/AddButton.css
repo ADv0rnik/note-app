@@ -1,6 +1,6 @@
 .button_plus {
-    border: 2px solid blue;
-    background-color: slateblue;
+    border: 2px solid #095776;
+    background-color: #ffffff;
     font-size: 16px;
     height: 2.5em;
     width: 2.5em;
@@ -11,7 +11,7 @@
     &:before {
         content: "";
         display: block;
-        background-color: white;
+        background-color: #095776;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -31,10 +31,10 @@
 
 
 .button_plus:hover {
-    background-color: white;
+    background-color: #095776;
     &:after,
     &:before {
-        background-color: slateblue;
+        background-color: #ffffff;
         transition: 0.3s;
     }
 }

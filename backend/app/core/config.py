@@ -25,8 +25,9 @@ class Settings(BaseSettings):
 
     ALLOWED_ORIGIN: list[AnyHttpUrl] = [
         'http://localhost',
+        'https://localhost:8081',
         'http://127.0.0.1',
-        'http://0.0.0.0'
+        'http://0.0.0.0',
     ]
 
     INIT_USER: dict = {
